@@ -36,10 +36,20 @@ body {
 }
 
 #loginView {
-  background-color: #1765B0;
+  background-color: #F8FAFC;
   background-image: 
-    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 85% 85%, rgba(13, 53, 94, 0.35) 0%, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(23, 101, 176, 0.07) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(234, 69, 1, 0.05) 0px, transparent 40%),
+    radial-gradient(at 50% 100%, rgba(23, 101, 176, 0.06) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, #F1F5F9 0px, transparent 50%);
+}
+
+.login-whiteout-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
 }
 
 /* Ambient mesh pattern */
@@ -75,11 +85,15 @@ body {
   box-shadow: 0 16px 32px -8px rgba(12, 43, 76, 0.22);
 }
 
-/* Login Split Card Styling */
+/* Whiteout Login Card Styling */
 .login-split-card {
   background: #FFFFFF;
-  border-radius: 32px;
-  box-shadow: 0 25px 60px -15px rgba(5, 20, 38, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border-radius: 28px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 
+    0 25px 60px -15px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.9) inset,
+    0 10px 30px -10px rgba(23, 101, 176, 0.04);
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -278,7 +292,7 @@ tbody tr:hover {
   }
   .login-split-card {
     border-radius: 1.25rem;
-    box-shadow: 0 15px 35px -10px rgba(5, 20, 38, 0.4);
+    box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.08);
   }
 }
 
