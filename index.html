@@ -82,41 +82,50 @@
   <div class="bg-mesh-pattern"></div>
 
   <!-- ===================================================================== -->
-  <!-- 1. ADMIN LOGIN VIEW (Whiteout Minimalist Clean Design)                 -->
+  <!-- 1. ADMIN LOGIN VIEW (Whiteout Minimalist Clean Design with Circles)    -->
   <!-- ===================================================================== -->
-  <div id="loginView" class="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-8 relative z-30 transition-all duration-300 overflow-hidden">
-    
-    <!-- Minimalist Ambient Glow Orbs -->
-    <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-aegean/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-1/4 right-1/4 translate-x-1/4 translate-y-1/4 w-96 h-96 bg-sandy/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div id="loginView" class="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-8 relative z-30 transition-all duration-300 overflow-hidden bg-slate-50">
     <div class="login-whiteout-pattern"></div>
 
-    <div class="login-split-card w-full max-w-4xl p-2.5 sm:p-3.5 grid grid-cols-1 lg:grid-cols-12 gap-0 relative z-10">
+    <div class="login-split-card w-full max-w-md lg:max-w-4xl p-2.5 sm:p-3.5 grid grid-cols-1 lg:grid-cols-12 gap-0 relative z-10 bg-white shadow-xl shadow-slate-900/5 overflow-hidden">
       
-      <!-- LEFT COLUMN: Minimalist Editorial & Institutional Panel (No Images) -->
-      <div class="lg:col-span-5 relative rounded-2xl sm:rounded-[24px] overflow-hidden flex flex-col justify-between p-6 sm:p-8 bg-gradient-to-br from-slate-50 via-slate-50/90 to-blue-50/30 border border-slate-200/70 shadow-sm">
+      <!-- Embossed 3D Static Geometric Circles strictly INSIDE the Login Card at the bottom -->
+      <div class="card-bottom-embossed-pedestal">
+        <div class="card-embossed-ring-1"></div>
+        <div class="card-embossed-ring-2"></div>
+        <div class="card-embossed-ring-3"></div>
+        <div class="card-embossed-core"></div>
+      </div>
+
+      <!-- LEFT COLUMN: Minimalist Editorial & Institutional Panel (Desktop Only, Hidden on Mobile) -->
+      <div class="hidden lg:flex lg:col-span-5 relative rounded-2xl sm:rounded-[24px] overflow-hidden flex-col justify-between p-6 sm:p-8 bg-gradient-to-br from-slate-50 via-white to-blue-50/20 border border-slate-200/80 shadow-xs z-10">
         
-        <!-- Subtle Vector Mesh Glow Accent -->
-        <div class="absolute -top-12 -right-12 w-44 h-44 bg-aegean/10 rounded-full blur-2xl pointer-events-none"></div>
-        <div class="absolute -bottom-12 -left-12 w-44 h-44 bg-sandy/10 rounded-full blur-2xl pointer-events-none"></div>
+        <!-- Embedded Geometric Circle Rings in Left Card -->
+        <div class="absolute -right-20 -top-20 w-72 h-72 rounded-full border border-slate-200/70 pointer-events-none"></div>
+        <div class="absolute -right-8 -top-8 w-52 h-52 rounded-full border border-slate-200/50 pointer-events-none"></div>
+        <div class="absolute right-4 top-4 w-32 h-32 rounded-full border border-aegean/15 pointer-events-none"></div>
+        <div class="absolute -left-16 -bottom-16 w-56 h-56 rounded-full border border-slate-200/60 pointer-events-none"></div>
 
         <!-- Top Header: Institutional Live Badge -->
         <div class="relative z-10 flex items-center justify-between text-xs">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200/80 text-slate-700 font-semibold text-[11px] shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold text-[11px] shadow-2xs">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 "></span>
             <span>Pusat Layanan BAAK</span>
           </div>
 
-          <div class="px-2.5 py-1 rounded-full bg-slate-100/90 border border-slate-200/60 font-mono text-[10px] text-slate-500 font-bold">
+          <div class="px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200/80 font-mono text-[10px] text-slate-600 font-bold">
             UTN 2024
           </div>
         </div>
 
         <!-- Center: Minimalist Seal, Typography & Feature Highlights -->
         <div class="relative z-10 my-6 sm:my-auto py-2 sm:py-4">
-          <!-- Minimalist Geometric Emblem Icon -->
-          <div class="w-13 h-13 rounded-2xl bg-gradient-to-tr from-aegean to-sky-500 text-white flex items-center justify-center shadow-lg shadow-aegean/25 ring-4 ring-white mb-4">
-            <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+          <!-- Minimalist Geometric Emblem Icon with Concentric Ripple -->
+          <div class="relative w-14 h-14 mb-4">
+            
+            <div class="relative w-14 h-14 rounded-2xl bg-aegean text-white flex items-center justify-center shadow-md ring-4 ring-white">
+              <i data-lucide="graduation-cap" class="w-7 h-7 text-white"></i>
+            </div>
           </div>
 
           <span class="text-[11px] uppercase tracking-widest text-aegean font-bold mb-1.5 block">Sistem Informasi Akademik</span>
@@ -127,22 +136,22 @@
             Platform manajemen data mahasiswa terintegrasi dengan MySQL untuk keandalan dan efisiensi administrasi kampus.
           </p>
 
-          <!-- Minimalist Feature Badges -->
-          <div class="mt-5 space-y-2.5 pt-4 border-t border-slate-200/60">
+          <!-- Minimalist Circular Feature Badges -->
+          <div class="mt-5 space-y-2.5 pt-4 border-t border-slate-200/70">
             <div class="flex items-center gap-2.5 text-xs text-slate-700">
-              <div class="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200/60 shadow-xs">
+              <div class="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-200/70">
                 <i data-lucide="database" class="w-3.5 h-3.5"></i>
               </div>
               <span class="font-medium text-[11px]">Konektivitas Relasional MySQL JDBC</span>
             </div>
             <div class="flex items-center gap-2.5 text-xs text-slate-700">
-              <div class="w-6 h-6 rounded-lg bg-sky-50 text-aegean flex items-center justify-center shrink-0 border border-sky-200/60 shadow-xs">
+              <div class="w-6 h-6 rounded-full bg-sky-50 text-aegean flex items-center justify-center shrink-0 border border-sky-200/70">
                 <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
               </div>
               <span class="font-medium text-[11px]">Autentikasi Terproteksi Sesi BAAK</span>
             </div>
             <div class="flex items-center gap-2.5 text-xs text-slate-700">
-              <div class="w-6 h-6 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-200/60 shadow-xs">
+              <div class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 border border-slate-200">
                 <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
               </div>
               <span class="font-medium text-[11px]">Audit Kueri & Rekapitulasi Data</span>
@@ -151,9 +160,9 @@
         </div>
 
         <!-- Bottom: Administrator Identity Badge -->
-        <div class="relative z-10 flex items-center justify-between pt-3.5 border-t border-slate-200/60">
+        <div class="relative z-10 flex items-center justify-between pt-3.5 border-t border-slate-200/70">
           <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-full bg-aegean/15 text-aegean border border-aegean/30 flex items-center justify-center font-bold text-xs shadow-sm">
+            <div class="w-8 h-8 rounded-full bg-aegean/15 text-aegean border border-aegean/30 flex items-center justify-center font-bold text-xs shadow-2xs">
               FA
             </div>
             <div>
@@ -161,20 +170,21 @@
               <div class="text-[10px] text-slate-500 font-medium">Administrator BAAK</div>
             </div>
           </div>
-          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-            Online
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+            Aktif
           </span>
         </div>
 
       </div>
 
       <!-- RIGHT COLUMN: Pristine Whiteout Authentication Form -->
-      <div class="lg:col-span-7 p-6 sm:p-9 lg:p-11 flex flex-col justify-between bg-white rounded-2xl">
+      <!-- RIGHT COLUMN: Pristine Whiteout Authentication Form (Full width on Mobile) -->
+      <div class="col-span-1 lg:col-span-7 p-6 sm:p-9 lg:p-11 flex flex-col justify-between bg-white/95 rounded-2xl relative z-10">
         
         <!-- Top Bar: Logo & Region Pill -->
         <div class="flex items-center justify-between pb-6">
           <div class="flex items-center gap-2.5">
-            <div class="w-9 h-9 rounded-xl bg-aegean flex items-center justify-center text-white font-bold shadow-md shadow-aegean/30">
+            <div class="w-9 h-9 rounded-xl bg-aegean flex items-center justify-center text-white font-bold shadow-sm">
               <i data-lucide="graduation-cap" class="w-5 h-5"></i>
             </div>
             <div class="flex items-center gap-1.5">
@@ -182,7 +192,7 @@
             </div>
           </div>
 
-          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-xs font-semibold text-slate-700 bg-slate-50 shadow-xs">
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-xs font-semibold text-slate-700 bg-slate-50 shadow-2xs">
             <span>🇮🇩</span>
             <span>ID / BAAK</span>
           </div>
@@ -190,12 +200,22 @@
 
         <!-- Center Form Content -->
         <div class="max-w-md w-full mx-auto my-auto py-2">
+          
+          <!-- Geometric Circular Seal Header -->
           <div class="text-center mb-6">
-            <h1 class="text-3xl sm:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
-              Hi Administrator
+            <div class="relative w-14 h-14 mx-auto mb-3 flex items-center justify-center">
+              <div class="absolute inset-0 rounded-full border border-slate-200/90"></div>
+              <div class="w-11 h-11 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-aegean shadow-2xs">
+                <i data-lucide="shield-check" class="w-5 h-5 text-aegean"></i>
+              </div>
+              <span class="absolute top-0.5 right-0.5 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white"></span>
+            </div>
+
+            <h1 class="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900 tracking-tight">
+              Portal Administrator
             </h1>
-            <p class="text-xs text-slate-500 mt-2">
-              Silakan masukkan kredensial untuk mengakses pangkalan data mahasiswa.
+            <p class="text-xs text-slate-500 mt-1.5">
+              Masukkan kredensial resmi untuk mengakses pangkalan data mahasiswa.
             </p>
           </div>
 
@@ -214,7 +234,7 @@
               <div class="relative">
                 <i data-lucide="user" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
                 <input type="text" id="loginUsername" required value="admin" placeholder="Masukkan username admin"
-                       class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aegean/20 focus:border-aegean bg-slate-50/50 hover:bg-white transition">
+                       class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aegean/20 focus:border-aegean bg-slate-50/50 hover:bg-white focus:bg-white transition">
               </div>
             </div>
 
@@ -224,13 +244,13 @@
               <div class="relative">
                 <i data-lucide="lock" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
                 <input type="password" id="loginPassword" required value="admin" placeholder="Masukkan password"
-                       class="w-full pl-10 pr-11 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aegean/20 focus:border-aegean bg-slate-50/50 hover:bg-white transition font-mono">
+                       class="w-full pl-10 pr-11 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aegean/20 focus:border-aegean bg-slate-50/50 hover:bg-white focus:bg-white transition font-mono">
                 <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
                   <i id="passwordToggleIcon" data-lucide="eye" class="w-4 h-4"></i>
                 </button>
               </div>
               <div class="flex justify-end mt-1.5">
-                <button type="button" onclick="alert('Kredensial Default:\nUsername: admin\nPassword: admin')" class="text-xs font-medium text-sandy hover:text-sandy-600 transition">
+                <button type="button" onclick="alert('Kredensial Default:\nUsername: admin\nPassword: admin')" class="text-xs font-medium text-aegean hover:underline transition">
                   Lupa password?
                 </button>
               </div>
@@ -242,14 +262,16 @@
               <span class="bg-white px-3 text-[11px] text-slate-400 uppercase font-semibold">atau</span>
             </div>
 
-            <!-- One-Click Fast Login / Autofill -->
-            <button type="button" onclick="autofillAndLogin()" class="w-full py-2.5 px-4 rounded-xl border border-slate-200 bg-slate-50/80 hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition shadow-xs cursor-pointer">
-              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <!-- One-Click Fast Login / Autofill with Circular Check Badge -->
+            <button type="button" onclick="autofillAndLogin()" class="w-full py-2.5 px-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition shadow-2xs cursor-pointer">
+              <span class="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                <i data-lucide="check" class="w-3 h-3"></i>
+              </span>
               <span>Gunakan Kredensial Default (admin / admin)</span>
             </button>
 
-            <!-- Primary Login Submit Button -->
-            <button type="submit" id="btnLoginSubmit" class="w-full py-3.5 px-4 rounded-xl bg-sandy hover:bg-sandy-600 text-white font-bold text-sm shadow-xl shadow-sandy/25 transition flex items-center justify-center gap-2 cursor-pointer active:scale-98">
+            <!-- Primary Login Submit Button (Aegean Sky Official Blue) -->
+            <button type="submit" id="btnLoginSubmit" class="w-full py-3.5 px-4 rounded-xl bg-aegean hover:bg-aegean-hover text-white font-bold text-sm shadow-sm transition flex items-center justify-center gap-2 cursor-pointer active:scale-98">
               <i data-lucide="log-in" class="w-4 h-4"></i>
               <span>Login ke Sistem</span>
             </button>
@@ -324,7 +346,7 @@
         <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition">
           <div class="flex items-center justify-between text-xs mb-2">
             <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-md shadow-emerald-400/50 animate-pulse"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-md shadow-emerald-400/50 "></span>
               <span class="font-semibold text-white">Server Basis Data</span>
             </div>
             <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">TERHUBUNG</span>
@@ -388,29 +410,29 @@
         <div class="space-y-1 pt-2 border-t border-white/10">
           <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 mb-2">Program Studi</div>
           
-          <button onclick="filterByProdiSidebar('')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between">
+          <button onclick="filterByProdiSidebar('')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between transition">
             <span>Semua Program Studi</span>
             <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
           </button>
-          <button onclick="filterByProdiSidebar('Teknik Informatika')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between">
+          <button onclick="filterByProdiSidebar('Teknik Informatika')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between transition">
             <span>Teknik Informatika</span>
-            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+            <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
           </button>
-          <button onclick="filterByProdiSidebar('Sistem Informasi')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between">
+          <button onclick="filterByProdiSidebar('Sistem Informasi')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between transition">
             <span>Sistem Informasi</span>
-            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
           </button>
-          <button onclick="filterByProdiSidebar('Rekayasa Perangkat Lunak')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between">
+          <button onclick="filterByProdiSidebar('Rekayasa Perangkat Lunak')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between transition">
             <span>Rekayasa Perangkat Lunak</span>
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
           </button>
-          <button onclick="filterByProdiSidebar('Sains Data')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between">
+          <button onclick="filterByProdiSidebar('Sains Data')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between transition">
             <span>Sains Data</span>
-            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+            <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
           </button>
-          <button onclick="filterByProdiSidebar('Teknik Elektro')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between">
+          <button onclick="filterByProdiSidebar('Teknik Elektro')" class="prodi-sidebar-btn w-full text-left px-3 py-1.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/5 flex items-center justify-between transition">
             <span>Teknik Elektro</span>
-            <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+            <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
           </button>
         </div>
 
@@ -435,7 +457,7 @@
           <button onclick="resetDefaultData()" title="Sinkronkan Ulang Data Master" class="py-1.5 px-2 rounded-lg bg-white/10 hover:bg-white/20 text-[11px] font-semibold text-slate-300 hover:text-white transition flex items-center justify-center gap-1">
             <i data-lucide="rotate-ccw" class="w-3 h-3"></i> Sinkron
           </button>
-          <button onclick="handleAdminLogout()" title="Keluar dari Akun Admin" class="py-1.5 px-2.5 rounded-lg bg-scarlet/20 hover:bg-scarlet text-[11px] font-bold text-rose-300 hover:text-white transition flex items-center justify-center gap-1">
+          <button onclick="handleAdminLogout()" title="Keluar dari Akun Admin" class="py-1.5 px-2.5 rounded-lg bg-rose-500/20 hover:bg-rose-600 text-[11px] font-bold text-rose-300 hover:text-white transition flex items-center justify-center gap-1">
             <i data-lucide="log-out" class="w-3 h-3"></i> Keluar
           </button>
         </div>
@@ -447,134 +469,135 @@
     <main class="flex-1 min-w-0 p-2.5 sm:p-5 lg:p-8 pb-24 lg:pb-8 flex flex-col gap-4 sm:gap-6 relative z-10">
 
       <!-- DESKTOP WORKSPACE CONTAINER -->
-      <div id="desktopAppWindow" class="desktop-window-mode glass-panel flex-1 flex flex-col overflow-hidden transition-all duration-300">
+      <div id="desktopAppWindow" class="desktop-window-mode flex-1 flex flex-col overflow-hidden transition-all duration-300">
         
-        <!-- TITLEBAR (Visible on Desktop, hidden on Mobile to avoid duplicate headers) -->
-        <div class="hidden lg:flex bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-slate-200 px-5 py-3 items-center justify-between border-b border-white/10 select-none">
+        <!-- ACADEMIC PORTAL TOPBAR / HEADER -->
+        <div class="bg-white border-b border-slate-200 px-5 sm:px-7 py-4 flex flex-wrap items-center justify-between gap-4 select-none">
           
-          <div class="flex items-center gap-2 sm:gap-2.5 text-xs font-medium min-w-0">
-            <div class="w-4 h-4 rounded bg-aegean flex items-center justify-center text-[10px] text-white font-bold shadow-sm shrink-0">S</div>
-            <span class="font-bold text-white tracking-wide truncate">SIAKAD</span>
-            <span class="text-slate-500 hidden sm:inline">|</span>
-            <span class="text-slate-300 font-mono text-[11px] hidden sm:inline">Universitas Teknologi Nasional</span>
-          </div>
-
-          <div class="hidden md:flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-[11px] font-mono text-emerald-300">Sesi Aktif · AutoCommit: On</span>
-          </div>
-
-          <div class="flex items-center gap-2 sm:gap-4 shrink-0">
-            <!-- View Switcher -->
-            <div class="flex items-center bg-slate-950/70 p-0.5 rounded-lg border border-white/10">
-              <button id="viewModeWindow" class="px-2 sm:px-2.5 py-1 rounded text-xs font-semibold flex items-center gap-1.5 bg-aegean text-white shadow-sm transition" title="Tampilan Jendela">
-                <i data-lucide="app-window" class="w-3.5 h-3.5"></i>
-                <span class="hidden md:inline">Jendela</span>
-              </button>
-              <button id="viewModeFull" class="px-2 sm:px-2.5 py-1 rounded text-xs font-semibold flex items-center gap-1.5 text-slate-300 hover:text-white transition" title="Tampilan Penuh">
-                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
-                <span class="hidden md:inline">Layar Penuh</span>
-              </button>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <span>Portal Akademik</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-400"></i>
+              <span class="text-slate-800 font-semibold">Pangkalan Data Mahasiswa</span>
             </div>
+            <h1 class="font-heading font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight mt-0.5">
+              Pangkalan Data Mahasiswa
+            </h1>
+          </div>
 
-            <div class="flex items-center gap-1.5">
-              <button class="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full bg-amber-400 hover:opacity-80 transition" title="Minimize"></button>
-              <button class="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full bg-emerald-400 hover:opacity-80 transition" title="Maximize"></button>
-              <button class="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full bg-rose-500 hover:opacity-80 transition" title="Close"></button>
+          <div class="flex items-center gap-3">
+            <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200">
+              <i data-lucide="calendar" class="w-3.5 h-3.5 text-slate-500"></i>
+              Semester Genap 2024/2025
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-200">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 "></span>
+              Basis Data Terhubung
+            </span>
+
+            <button onclick="handleAdminLogout()" title="Keluar ke Halaman Login" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold shadow-2xs transition">
+              <i data-lucide="log-out" class="w-3.5 h-3.5 text-slate-500"></i>
+              <span class="hidden sm:inline">Keluar</span>
+            </button>
+
+            <!-- Hidden dummy elements to maintain app.js DOM listeners -->
+            <div class="hidden">
+              <button id="viewModeWindow" aria-hidden="true"></button>
+              <button id="viewModeFull" aria-hidden="true"></button>
             </div>
           </div>
 
         </div>
 
         <!-- WORKSPACE CONTENT BODY -->
-        <div class="p-3 sm:p-6 lg:p-7 flex-1 flex flex-col gap-4 sm:gap-6">
+        <div class="p-3 sm:p-6 lg:p-7 flex-1 flex flex-col gap-4 sm:gap-6 bg-slate-50/50">
 
           <!-- METRICS SUMMARY CARDS -->
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             
             <!-- Total Mahasiswa -->
-            <div class="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group border-l-4 border-l-aegean">
+            <div id="cardStatTotal" onclick="toggleMetricCardForward('total')" class="metric-card-interactive bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-xs flex flex-col justify-between hover:border-slate-300 transition">
               <div class="flex items-center justify-between">
-                <span class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider truncate">Total Mahasiswa</span>
-                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-aegean/15 text-aegean flex items-center justify-center shadow-sm shrink-0">
-                  <i data-lucide="users" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider truncate">Total Mahasiswa</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                  <i data-lucide="users" class="w-4 h-4 sm:w-4.5 sm:h-4.5"></i>
                 </div>
               </div>
-              <div class="mt-2 sm:mt-3 flex items-baseline gap-1.5 sm:gap-2">
+              <div class="mt-3 flex items-baseline gap-1.5">
                 <span id="statTotalStudents" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">0</span>
-                <span class="text-[10px] sm:text-xs font-medium text-slate-500">terdaftar</span>
+                <span class="text-xs font-medium text-slate-500">terdaftar</span>
               </div>
-              <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-aegean font-semibold flex items-center gap-1 truncate">
-                <i data-lucide="check" class="w-3 h-3 shrink-0"></i>
-                <span class="truncate">Pangkalan Data BAAK</span>
+              <div class="mt-2 text-xs text-slate-500 font-medium flex items-center gap-1.5 truncate">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                <span class="truncate">Pangkalan Data Resmi</span>
               </div>
             </div>
 
             <!-- Rata-Rata IPK -->
-            <div class="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group border-l-4 border-l-sandy">
+            <div id="cardStatGpa" onclick="toggleMetricCardForward('gpa')" class="metric-card-interactive bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-xs flex flex-col justify-between hover:border-slate-300 transition">
               <div class="flex items-center justify-between">
-                <span class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider truncate">Rata-Rata IPK</span>
-                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-sandy/15 text-sandy flex items-center justify-center shadow-sm shrink-0">
-                  <i data-lucide="award" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider truncate">Rata-Rata IPK</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                  <i data-lucide="award" class="w-4 h-4 sm:w-4.5 sm:h-4.5"></i>
                 </div>
               </div>
-              <div class="mt-2 sm:mt-3 flex items-baseline gap-1.5 sm:gap-2">
+              <div class="mt-3 flex items-baseline gap-1.5">
                 <span id="statAverageGpa" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">0.00</span>
-                <span class="text-[10px] sm:text-xs font-bold text-sandy">Skala 4.00</span>
+                <span class="text-xs font-medium text-slate-500">Skala 4.00</span>
               </div>
-              <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-slate-500 font-medium flex items-center gap-1 truncate">
-                <i data-lucide="trending-up" class="w-3 h-3 text-emerald-600 shrink-0"></i>
-                <span class="truncate">Indeks Kumulatif</span>
+              <div class="mt-2 text-xs text-slate-500 font-medium flex items-center gap-1.5 truncate">
+                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-slate-600 shrink-0"></i>
+                <span class="truncate">Indeks Prestasi Kumulatif</span>
               </div>
             </div>
 
             <!-- Mahasiswa Aktif -->
-            <div class="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group border-l-4 border-l-emerald-500">
+            <div id="cardStatAktif" onclick="toggleMetricCardForward('aktif')" class="metric-card-interactive bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-xs flex flex-col justify-between hover:border-slate-300 transition">
               <div class="flex items-center justify-between">
-                <span class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider truncate">Mahasiswa Aktif</span>
-                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center shadow-sm shrink-0">
-                  <i data-lucide="user-check" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider truncate">Mahasiswa Aktif</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
+                  <i data-lucide="user-check" class="w-4 h-4 sm:w-4.5 sm:h-4.5"></i>
                 </div>
               </div>
-              <div class="mt-2 sm:mt-3 flex items-baseline gap-1.5 sm:gap-2">
+              <div class="mt-3 flex items-baseline gap-1.5">
                 <span id="statActiveStudents" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">0</span>
-                <span id="statActiveRatio" class="text-[10px] sm:text-xs font-bold text-emerald-600">(0%)</span>
+                <span id="statActiveRatio" class="text-xs font-bold text-emerald-700">(0%)</span>
               </div>
-              <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-emerald-600 font-semibold flex items-center gap-1 truncate">
-                <i data-lucide="check" class="w-3 h-3 shrink-0"></i>
+              <div class="mt-2 text-xs text-slate-500 font-medium flex items-center gap-1.5 truncate">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
                 <span class="truncate">Semester Berjalan</span>
               </div>
             </div>
 
             <!-- Mahasiswa Berprestasi (Cumlaude) -->
-            <div class="glass-card rounded-xl sm:rounded-2xl p-3 sm:p-5 relative overflow-hidden group border-l-4 border-l-scarlet">
+            <div id="cardStatCumlaude" onclick="toggleMetricCardForward('cumlaude')" class="metric-card-interactive bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-xs flex flex-col justify-between hover:border-slate-300 transition">
               <div class="flex items-center justify-between">
-                <span class="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider truncate">Cumlaude</span>
-                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-scarlet/15 text-scarlet flex items-center justify-center shadow-sm shrink-0">
-                  <i data-lucide="sparkles" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider truncate">Cumlaude</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+                  <i data-lucide="sparkles" class="w-4 h-4 sm:w-4.5 sm:h-4.5"></i>
                 </div>
               </div>
-              <div class="mt-2 sm:mt-3 flex items-baseline gap-1.5 sm:gap-2">
+              <div class="mt-3 flex items-baseline gap-1.5">
                 <span id="statCumlaudeCount" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">0</span>
-                <span class="text-[10px] sm:text-xs font-bold text-slate-500">Mahasiswa</span>
+                <span class="text-xs font-medium text-slate-500">Mahasiswa</span>
               </div>
-              <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-scarlet font-semibold flex items-center gap-1 truncate">
-                <i data-lucide="star" class="w-3 h-3 shrink-0"></i>
-                <span class="truncate">IPK ≥ 3.50</span>
+              <div class="mt-2 text-xs text-slate-500 font-medium flex items-center gap-1.5 truncate">
+                <i data-lucide="star" class="w-3.5 h-3.5 text-slate-600 shrink-0"></i>
+                <span class="truncate">IPK ≥ 3.50 (Predikat)</span>
               </div>
             </div>
 
           </div>
 
           <!-- SEARCH, FILTERS & ACTION TOOLBAR -->
-          <div class="glass-card rounded-2xl p-4 sm:p-5 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-xs flex flex-col lg:flex-row lg:items-center justify-between gap-3 sm:gap-4">
             
-            <div class="flex-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div class="flex-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
               
               <!-- Quick Search Input -->
               <div class="relative flex-1">
                 <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="searchInput" placeholder="Cari nama mahasiswa, NIM, atau email..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aegean/30 focus:border-aegean transition bg-white/80 hover:bg-white shadow-sm">
+                <input type="text" id="searchInput" placeholder="Cari nama mahasiswa, NIM, atau email..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-aegean/20 focus:border-aegean transition bg-slate-50/50 hover:bg-white focus:bg-white">
                 <button id="clearSearchBtn" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
                   <i data-lucide="x" class="w-4 h-4"></i>
                 </button>
@@ -582,7 +605,7 @@
 
               <!-- Prodi Filter -->
               <div class="sm:w-56">
-                <select id="filterProdi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white/80 hover:bg-white focus:outline-none focus:ring-2 focus:ring-aegean/30 focus:border-aegean font-medium text-slate-700 shadow-sm transition">
+                <select id="filterProdi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-aegean/20 focus:border-aegean font-medium text-slate-700 transition">
                   <option value="">Semua Program Studi</option>
                   <option value="Teknik Informatika">Teknik Informatika</option>
                   <option value="Sistem Informasi">Sistem Informasi</option>
@@ -594,7 +617,7 @@
 
               <!-- Status Filter -->
               <div class="sm:w-36">
-                <select id="filterStatus" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white/80 hover:bg-white focus:outline-none focus:ring-2 focus:ring-aegean/30 focus:border-aegean font-medium text-slate-700 shadow-sm transition">
+                <select id="filterStatus" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-slate-50/50 hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-aegean/20 focus:border-aegean font-medium text-slate-700 transition">
                   <option value="">Semua Status</option>
                   <option value="Aktif">Aktif</option>
                   <option value="Cuti">Cuti</option>
@@ -605,26 +628,26 @@
             </div>
 
             <!-- Buttons Group -->
-            <div class="flex items-center gap-2.5 self-end lg:self-auto w-full lg:w-auto">
-              <button id="btnResetFilters" title="Atur ulang filter pencarian" class="px-3 py-2.5 rounded-xl border border-slate-200 bg-white/80 text-slate-600 hover:bg-white text-sm font-medium shadow-sm transition flex items-center justify-center gap-1.5">
-                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <div class="flex items-center gap-2 self-end lg:self-auto w-full lg:w-auto">
+              <button id="btnResetFilters" title="Atur ulang filter pencarian" class="px-3 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 text-sm font-medium transition flex items-center justify-center gap-1.5 shadow-2xs">
+                <i data-lucide="rotate-ccw" class="w-4 h-4 text-slate-500"></i>
                 <span class="hidden sm:inline">Reset</span>
               </button>
 
               <!-- Export Buttons -->
-              <div class="flex items-center gap-1 bg-white/80 border border-slate-200 rounded-xl p-1 shadow-sm">
-                <button onclick="exportCSV()" title="Ekspor data format CSV" class="p-2 rounded-lg hover:bg-slate-100 text-slate-600 transition flex items-center gap-1 text-xs font-semibold">
+              <div class="flex items-center gap-1 bg-white border border-slate-200 rounded-xl p-1 shadow-2xs">
+                <button onclick="exportCSV()" title="Ekspor data format CSV" class="p-2 rounded-lg hover:bg-slate-100 text-slate-700 transition flex items-center gap-1 text-xs font-semibold">
                   <i data-lucide="file-spreadsheet" class="w-4 h-4 text-emerald-600"></i>
                   <span class="hidden sm:inline">CSV</span>
                 </button>
-                <button onclick="exportJSON()" title="Ekspor data format JSON" class="p-2 rounded-lg hover:bg-slate-100 text-slate-600 transition flex items-center gap-1 text-xs font-semibold">
+                <button onclick="exportJSON()" title="Ekspor data format JSON" class="p-2 rounded-lg hover:bg-slate-100 text-slate-700 transition flex items-center gap-1 text-xs font-semibold">
                   <i data-lucide="file-json" class="w-4 h-4 text-amber-600"></i>
                   <span class="hidden sm:inline">JSON</span>
                 </button>
               </div>
 
               <!-- Register Student Button -->
-              <button onclick="openAddModal()" class="flex-1 lg:flex-none px-4 py-2.5 rounded-xl bg-sandy hover:bg-sandy-600 text-white font-bold text-sm shadow-lg shadow-sandy/30 transition flex items-center justify-center gap-2 cursor-pointer active:scale-95">
+              <button onclick="openAddModal()" class="flex-1 lg:flex-none px-4 py-2.5 rounded-xl bg-aegean hover:bg-aegean-hover text-white font-bold text-sm shadow-sm transition flex items-center justify-center gap-2 cursor-pointer active:scale-98">
                 <i data-lucide="user-plus" class="w-4 h-4"></i>
                 <span>Tambah Mahasiswa</span>
               </button>
@@ -633,16 +656,16 @@
           </div>
 
           <!-- DATA TABLE CONTAINER -->
-          <div class="glass-card rounded-2xl border border-slate-200/80 shadow-md flex flex-col overflow-hidden">
+          <div class="bg-white rounded-xl border border-slate-200 shadow-xs flex flex-col overflow-hidden">
             
             <!-- Table Bar Header -->
-            <div class="px-5 py-3.5 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 bg-slate-50/80">
+            <div class="px-5 py-3.5 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 bg-white">
               <div class="flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-aegean/15 text-aegean flex items-center justify-center">
+                <div class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center">
                   <i data-lucide="table" class="w-4 h-4"></i>
                 </div>
                 <h2 class="font-heading font-bold text-slate-800 text-sm sm:text-base">Daftar Mahasiswa Terdaftar</h2>
-                <span id="dataCountBadge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-aegean/10 text-aegean">
+                <span id="dataCountBadge" class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
                   0 Mahasiswa
                 </span>
               </div>
@@ -660,9 +683,9 @@
                   </select>
                 </div>
 
-                <div class="h-4 w-px bg-slate-300"></div>
+                <div class="h-4 w-px bg-slate-200"></div>
 
-                <button onclick="window.print()" title="Cetak Rekapitulasi Mahasiswa" class="p-1.5 rounded-lg hover:bg-slate-200 text-slate-600 transition flex items-center gap-1 text-xs font-medium">
+                <button onclick="window.print()" title="Cetak Rekapitulasi Mahasiswa" class="p-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition flex items-center gap-1 text-xs font-medium">
                   <i data-lucide="printer" class="w-4 h-4"></i>
                   <span class="hidden sm:inline">Cetak</span>
                 </button>
@@ -678,7 +701,7 @@
             <div class="hidden md:block overflow-x-auto w-full">
               <table class="w-full text-left border-collapse text-sm">
                 <thead>
-                  <tr class="bg-slate-100/90 text-slate-600 text-xs font-bold uppercase tracking-wider border-b border-slate-200">
+                  <tr class="bg-slate-50 text-slate-600 text-xs font-bold uppercase tracking-wider border-b border-slate-200">
                     <th class="py-3.5 px-4 w-12 text-center">No</th>
                     <th class="py-3.5 px-4 cursor-pointer hover:text-aegean select-none" onclick="sortTable('nim')">
                       <div class="flex items-center gap-1.5">
@@ -712,28 +735,28 @@
 
             <!-- Empty State -->
             <div id="emptyState" class="hidden py-14 px-4 text-center">
-              <div class="w-16 h-16 rounded-2xl bg-aegean/10 text-aegean mx-auto flex items-center justify-center mb-3">
+              <div class="w-16 h-16 rounded-2xl bg-slate-100 text-slate-500 mx-auto flex items-center justify-center mb-3">
                 <i data-lucide="search-x" class="w-8 h-8"></i>
               </div>
               <h3 class="text-base font-bold text-slate-800 font-heading">Data Mahasiswa Tidak Ditemukan</h3>
               <p class="text-xs text-slate-500 max-w-sm mx-auto mt-1">Silakan sesuaikan kata kunci pencarian atau bersihkan filter.</p>
-              <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-xs font-bold rounded-xl bg-aegean text-white hover:bg-aegean-600 transition shadow-md shadow-aegean/20">
+              <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-xs font-bold rounded-xl bg-aegean text-white hover:bg-aegean-hover transition shadow-sm">
                 Bersihkan Filter
               </button>
             </div>
 
             <!-- Pagination Bar -->
-            <div class="px-5 py-3.5 border-t border-slate-200 bg-slate-50/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+            <div class="px-5 py-3.5 border-t border-slate-200 bg-white flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
               <div id="paginationInfo">
                 Menampilkan <span class="font-bold text-slate-800">1</span> - <span class="font-bold text-slate-800" id="pageEnd">10</span> dari <span class="font-bold text-slate-800" id="totalRecords">10</span> data
               </div>
 
               <div class="flex items-center gap-2">
-                <button id="prevPageBtn" class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed font-semibold transition flex items-center gap-1 shadow-sm">
+                <button id="prevPageBtn" class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed font-semibold transition flex items-center gap-1 shadow-2xs">
                   <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i> Prev
                 </button>
                 <div id="pageNumberButtons" class="flex items-center gap-1"></div>
-                <button id="nextPageBtn" class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed font-semibold transition flex items-center gap-1 shadow-sm">
+                <button id="nextPageBtn" class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed font-semibold transition flex items-center gap-1 shadow-2xs">
                   Next <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
                 </button>
               </div>
@@ -744,19 +767,19 @@
         </div>
 
         <!-- SYSTEM STATUS FOOTER BAR -->
-        <div class="bg-slate-900 text-slate-300 px-5 py-2.5 flex items-center justify-between text-[11px] font-mono border-t border-white/10 select-none">
+        <div class="bg-white text-slate-500 px-5 py-2.5 flex flex-wrap items-center justify-between text-[11px] font-mono border-t border-slate-200 select-none">
           <div class="flex items-center gap-3">
             <span class="flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              <span class="text-white font-semibold">MySQL 8.0: TERHUBUNG</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span class="text-slate-700 font-semibold">MySQL 8.0: Terhubung</span>
             </span>
-            <span class="text-slate-600">|</span>
-            <span id="lastQueryExecuted" class="text-slate-300 truncate max-w-md">Kueri Terakhir: SELECT * FROM mahasiswa ORDER BY nim ASC</span>
+            <span class="text-slate-300">|</span>
+            <span id="lastQueryExecuted" class="text-slate-500 truncate max-w-md">Kueri Terakhir: SELECT * FROM mahasiswa ORDER BY nim ASC</span>
           </div>
           <div class="hidden sm:flex items-center gap-3 text-slate-400">
             <span>Encoding: UTF-8</span>
-            <span class="text-slate-600">|</span>
-            <span>Engine: Java SE 17 · MySQL JDBC</span>
+            <span class="text-slate-300">|</span>
+            <span>SIAKAD · Universitas Teknologi Nasional</span>
           </div>
         </div>
 
@@ -921,7 +944,7 @@
           <button type="button" onclick="closeModal()" class="px-4 py-2.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 text-sm font-semibold transition">
             Batal
           </button>
-          <button type="submit" id="modalSubmitBtn" class="px-5 py-2.5 rounded-xl bg-sandy hover:bg-sandy-600 text-white font-bold text-sm shadow-md shadow-sandy/25 transition flex items-center gap-2 cursor-pointer">
+          <button type="submit" id="modalSubmitBtn" class="px-5 py-2.5 rounded-xl bg-aegean hover:bg-aegean-hover text-white font-bold text-sm shadow-sm transition flex items-center gap-2 cursor-pointer">
             <i data-lucide="save" class="w-4 h-4"></i>
             <span>Simpan Data</span>
           </button>

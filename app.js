@@ -514,8 +514,14 @@ class UIManager {
     this.filterStatus.value = '';
     this.sortBy.value = 'nim-asc';
     this.currentPage = 1;
+
+    // Reset 3D elevated state on top metric cards
+    ['cardStatTotal', 'cardStatGpa', 'cardStatAktif', 'cardStatCumlaude'].forEach(id => {
+      const card = document.getElementById(id);
+      if (card) card.classList.remove('is-active-forward');
+    });
+
     this.render();
-    this.showToast('Filter telah diatur ulang ke kondisi default', 'info');
   }
 
   render() {
@@ -583,7 +589,7 @@ class UIManager {
           <!-- Nama Mahasiswa -->
           <td class="py-3 px-4">
             <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-aegean/15 text-aegean font-heading font-bold text-xs flex items-center justify-center shrink-0">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 font-heading font-bold text-xs flex items-center justify-center shrink-0 border border-slate-200/60">
                 ${initials}
               </div>
               <div class="min-w-0">
@@ -655,7 +661,7 @@ class UIManager {
           <div class="p-4 hover:bg-slate-50/90 transition flex flex-col gap-2.5">
             <div class="flex items-start justify-between gap-2">
               <div class="flex items-center gap-2.5 min-w-0">
-                <div class="w-9 h-9 rounded-xl bg-aegean/15 text-aegean font-heading font-bold text-xs flex items-center justify-center shrink-0">
+                <div class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 font-heading font-bold text-xs flex items-center justify-center shrink-0 border border-slate-200/60">
                   ${initials}
                 </div>
                 <div class="min-w-0">
@@ -684,13 +690,13 @@ class UIManager {
             </div>
 
             <div class="grid grid-cols-3 gap-2 pt-1">
-              <button onclick="ui.openDetailModal('${mhs.nim}')" class="py-2 px-2 rounded-xl bg-aegean/10 hover:bg-aegean text-aegean hover:text-white text-xs font-bold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-sm">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i> KTM
+              <button onclick="ui.openDetailModal('${mhs.nim}')" class="py-1.5 px-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-2xs">
+                <i data-lucide="eye" class="w-3.5 h-3.5 text-slate-500"></i> KTM
               </button>
-              <button onclick="ui.openEditModal('${mhs.nim}')" class="py-2 px-2 rounded-xl bg-sandy/10 hover:bg-sandy text-sandy hover:text-white text-xs font-bold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-sm">
-                <i data-lucide="edit-3" class="w-3.5 h-3.5"></i> Edit
+              <button onclick="ui.openEditModal('${mhs.nim}')" class="py-1.5 px-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-2xs">
+                <i data-lucide="edit-3" class="w-3.5 h-3.5 text-slate-500"></i> Edit
               </button>
-              <button onclick="ui.openDeleteModal('${mhs.nim}')" class="py-2 px-2 rounded-xl bg-scarlet/10 hover:bg-scarlet text-scarlet hover:text-white text-xs font-bold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-sm">
+              <button onclick="ui.openDeleteModal('${mhs.nim}')" class="py-1.5 px-2 rounded-lg border border-slate-200 bg-white hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 text-slate-600 text-xs font-semibold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-2xs">
                 <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Hapus
               </button>
             </div>
@@ -1058,6 +1064,9 @@ if (isBrowser) {
     window.dbAuditLogger = dbAuditLogger;
     window.studentService = studentService;
     dbAuditLogger.renderLogs();
+
+    // Pastikan halaman awal selalu menampilkan layar login Whiteout
+    sessionStorage.removeItem('siakad_admin_authenticated');
     checkAuthState();
   });
 } else {
@@ -1081,12 +1090,14 @@ function checkAuthState() {
   const isAuthenticated = sessionStorage.getItem('siakad_admin_authenticated') === 'true';
   if (isAuthenticated) {
     loginView.classList.add('hidden');
+    loginView.classList.remove('flex');
     appView.classList.remove('hidden');
     appView.classList.add('flex');
     if (ui) ui.render();
     safeCreateIcons();
   } else {
     loginView.classList.remove('hidden');
+    loginView.classList.add('flex');
     appView.classList.add('hidden');
     appView.classList.remove('flex');
     safeCreateIcons();
@@ -1261,6 +1272,64 @@ function sortTable(column) {
     sortSelect.value = `${column}-asc`;
   }
   ui.render();
+}
+
+// -------------------------------------------------------------
+// RESPONSIVE 3D POP FORWARD EFFECT FOR TOP METRIC CARDS
+// -------------------------------------------------------------
+function toggleMetricCardForward(type) {
+  const cards = {
+    total: document.getElementById('cardStatTotal'),
+    gpa: document.getElementById('cardStatGpa'),
+    aktif: document.getElementById('cardStatAktif'),
+    cumlaude: document.getElementById('cardStatCumlaude')
+  };
+
+  const targetCard = cards[type];
+  if (!targetCard) return;
+
+  const isAlreadyActive = targetCard.classList.contains('is-active-forward');
+
+  // Deactivate all cards first
+  Object.values(cards).forEach(card => {
+    if (card) card.classList.remove('is-active-forward');
+  });
+
+  if (!isAlreadyActive) {
+    // Highlight selected card
+    targetCard.classList.add('is-active-forward');
+
+    // Perform associated filtering quietly without toast messages
+    if (type === 'aktif') {
+      const filterStatus = document.getElementById('filterStatus');
+      if (filterStatus) filterStatus.value = 'Aktif';
+      if (ui) {
+        ui.currentPage = 1;
+        ui.render();
+      }
+    } else if (type === 'cumlaude') {
+      const sortBy = document.getElementById('sortBy');
+      if (sortBy) sortBy.value = 'ipk-desc';
+      if (ui) {
+        ui.render();
+      }
+    } else if (type === 'gpa') {
+      const sortBy = document.getElementById('sortBy');
+      if (sortBy) sortBy.value = 'ipk-desc';
+      if (ui) {
+        ui.render();
+      }
+    } else if (type === 'total') {
+      if (ui) {
+        ui.resetFilters();
+      }
+    }
+  } else {
+    // Clicked again -> return to normal state and reset filter
+    if (ui) {
+      ui.resetFilters();
+    }
+  }
 }
 
 function switchCodeTab(tabId) {

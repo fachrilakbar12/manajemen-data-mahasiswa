@@ -19,18 +19,11 @@
   --color-scarlet-light: #FDF2F3;
 }
 
-/* Background Imersif Aegean Sky */
+/* Background Resmi Institusi */
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #1765B0;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(23, 101, 176, 0.95) 0px, transparent 55%),
-    radial-gradient(at 100% 0%, rgba(234, 69, 1, 0.18) 0px, transparent 40%),
-    radial-gradient(at 50% 100%, rgba(23, 101, 176, 0.9) 0px, transparent 60%),
-    radial-gradient(at 100% 100%, rgba(18, 82, 145, 0.85) 0px, transparent 50%);
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: #F8FAFC;
   color: #1E293B;
   min-height: 100vh;
 }
@@ -44,6 +37,7 @@ body {
     radial-gradient(at 100% 100%, #F1F5F9 0px, transparent 50%);
 }
 
+/* Subtle pattern for Whiteout Login */
 .login-whiteout-pattern {
   position: absolute;
   inset: 0;
@@ -52,37 +46,107 @@ body {
   pointer-events: none;
 }
 
-/* Ambient mesh pattern */
-.bg-mesh-pattern {
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+/* ========================================================
+   EMBOSSED 3D CIRCULAR BASE (Strictly Inside Login Card - Bottom Area)
+   ======================================================== */
+.card-bottom-embossed-pedestal {
+  position: absolute;
+  bottom: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  height: 380px;
   pointer-events: none;
   z-index: 0;
+  border-radius: 50%;
 }
 
-/* Glassmorphism & Elevation */
+.card-embossed-ring-1 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #CBD5E1;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%);
+  box-shadow: 
+    0 12px 28px -6px rgba(15, 23, 42, 0.08),
+    inset 0 2px 4px 0 #FFFFFF,
+    inset 0 -2px 4px 0 rgba(15, 23, 42, 0.04);
+}
+
+.card-embossed-ring-2 {
+  position: absolute;
+  inset: 35px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(23, 101, 176, 0.45);
+  box-shadow: inset 0 0 12px rgba(23, 101, 176, 0.05);
+}
+
+.card-embossed-ring-3 {
+  position: absolute;
+  inset: 70px;
+  border-radius: 50%;
+  border: 2px solid #94A3B8;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+  box-shadow: 
+    0 4px 12px rgba(15, 23, 42, 0.06),
+    inset 0 2px 4px 0 #FFFFFF;
+}
+
+.card-embossed-core {
+  position: absolute;
+  inset: 105px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%);
+  border: 2px solid #CBD5E1;
+  box-shadow: 
+    inset 0 2px 4px 0 #FFFFFF,
+    inset 0 -2px 4px 0 rgba(15, 23, 42, 0.06);
+}
+
+/* ========================================================
+   CLEAN RESPONSIVE TOP METRIC CARDS
+   ======================================================== */
+.metric-card-interactive {
+  transition: all 0.2s ease;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.metric-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -2px rgba(15, 23, 42, 0.08);
+  border-color: #CBD5E1;
+}
+
+.metric-card-interactive.is-active-forward {
+  border-color: #1765B0 !important;
+  box-shadow: 0 4px 12px -2px rgba(23, 101, 176, 0.18);
+  background-color: #FFFFFF !important;
+}
+
+/* Subtle pattern for official portal */
+.bg-mesh-pattern {
+  display: none;
+}
+
+/* Clean Elevation Cards for Official Portal */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 20px 40px -15px rgba(9, 36, 66, 0.4), 0 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 10px 25px -5px rgba(12, 43, 76, 0.15);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 32px -8px rgba(12, 43, 76, 0.22);
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.06);
 }
 
 /* Whiteout Login Card Styling */
@@ -105,30 +169,27 @@ body {
   min-height: 480px;
 }
 
-/* Sidebar Styling */
+/* Official Portal Sidebar Styling */
 .sidebar-glass {
-  background: rgba(9, 36, 66, 0.90);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
+  background: #0B192C;
+  border-right: 1px solid #1E293B;
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.05);
 }
 
 .nav-item {
   transition: all 0.2s ease;
-  color: #CBD5E1;
+  color: #94A3B8;
 }
 
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.06);
+  color: #F8FAFC;
 }
 
 .nav-item.active {
-  background: linear-gradient(135deg, rgba(23, 101, 176, 0.9) 0%, rgba(18, 82, 145, 0.95) 100%);
+  background: #1765B0;
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 12px rgba(23, 101, 176, 0.35);
+  box-shadow: 0 2px 8px -1px rgba(23, 101, 176, 0.4);
 }
 
 /* Custom Scrollbars */
@@ -137,20 +198,22 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: #94A3B8;
 }
 
-/* Desktop Window Mode styling */
+/* Workspace Container Styling */
 .desktop-window-mode {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid #E2E8F0;
   border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  background: #FFFFFF;
 }
 
 .fullscreen-mode {
@@ -163,11 +226,11 @@ body {
 
 /* Table styling */
 tbody tr {
-  transition: all 0.15s ease-in-out;
+  transition: background-color 0.15s ease;
 }
 
 tbody tr:hover {
-  background-color: rgba(240, 246, 253, 0.85);
+  background-color: #F8FAFC;
 }
 
 /* Badges */
@@ -175,61 +238,64 @@ tbody tr:hover {
   display: inline-flex;
   align-items: center;
   padding: 0.15rem 0.65rem;
-  border-radius: 9999px;
+  border-radius: 6px;
   font-size: 0.75rem;
   font-weight: 600;
-  border: 1px solid rgba(23, 101, 176, 0.25);
-  background-color: #F0F6FD;
-  color: #1765B0;
+  border: 1px solid #E2E8F0;
+  background-color: #F1F5F9;
+  color: #334155;
 }
 
 .badge-ipk-high {
   background-color: #ECFDF5;
-  color: #065F46;
+  color: #047857;
   border: 1px solid #A7F3D0;
 }
 
 .badge-ipk-mid {
   background-color: #FFFBEB;
-  color: #92400E;
+  color: #B45309;
   border: 1px solid #FDE68A;
 }
 
 .badge-ipk-low {
   background-color: #FEF2F2;
-  color: #991B1B;
+  color: #B91C1C;
   border: 1px solid #FECACA;
 }
 
-/* Action buttons */
+/* Action buttons - Clean official style */
 .btn-action-view {
   color: #1765B0;
-  background-color: #F0F6FD;
-  border: 1px solid rgba(23, 101, 176, 0.25);
+  background-color: #EFF6FF;
+  border: 1px solid #BFDBFE;
 }
 .btn-action-view:hover {
   background-color: #1765B0;
   color: #FFFFFF;
+  border-color: #1765B0;
 }
 
 .btn-action-edit {
-  color: #EA4501;
-  background-color: #FDF2EC;
-  border: 1px solid rgba(228, 87, 46, 0.25);
+  color: #475569;
+  background-color: #F1F5F9;
+  border: 1px solid #CBD5E1;
 }
 .btn-action-edit:hover {
   background-color: #EA4501;
   color: #FFFFFF;
+  border-color: #EA4501;
 }
 
 .btn-action-delete {
-  color: #D21625;
-  background-color: #FDF2F3;
-  border: 1px solid rgba(210, 22, 37, 0.25);
+  color: #64748B;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
 }
 .btn-action-delete:hover {
   background-color: #D21625;
   color: #FFFFFF;
+  border-color: #D21625;
 }
 
 /* Toast */
